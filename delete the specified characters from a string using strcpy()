@@ -1,0 +1,24 @@
+#include<stdio.h>
+#include<string.h>
+void delete_char(char *p,int a,int b);
+int main()
+{
+int pos,n;
+char string[20];
+puts("enter the string");
+gets(string);
+printf("enter the specified position from where you want to delete the number of character");
+scanf("%d",&pos);
+printf("enter the number of charcter you want to delete");
+scanf("%d",&n);
+delete_char(string,pos,n);
+return 0;
+}
+void delete_char(char *p,int a , int b)
+{
+if((a+b-1)<=strlen(p))
+{
+strcpy(&p[a-1],&p[a+b-1]);
+puts(p);
+}
+}
